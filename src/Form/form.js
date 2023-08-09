@@ -1,98 +1,124 @@
+import "./form.css";
+
 const formFunction = (projectFactory,Projects,homeProjects,workProjects,otherProjects) => {
     const content = document.querySelector(".content");
+    content.classList.add('content');
 
     const form = document.createElement("form");
     form.classList.add("form");
     content.appendChild(form);
 
-        const labelTitle = document.createElement("label");
-        labelTitle.textContent = "Title"
-        labelTitle.setAttribute("for","title");
-        form.appendChild(labelTitle);
+        const title = document.createElement("div");
+        title.classList.add("title","input");
+        form.appendChild(title);
 
-        const inputTitle = document.createElement("input");
-        inputTitle.setAttribute("type","text");
-        inputTitle.setAttribute("name","title");
-        inputTitle.setAttribute("id","title");
-        form.appendChild(inputTitle);
+            const labelTitle = document.createElement("label");
+            labelTitle.textContent = "Title"
+            labelTitle.setAttribute("for","title");
+            title.appendChild(labelTitle);
 
-        const labelDesc = document.createElement("label");
-        labelDesc.textContent = "Description"
-        labelDesc.setAttribute("for","description");
-        form.appendChild(labelDesc);
+            const inputTitle = document.createElement("input");
+            inputTitle.setAttribute("type","text");
+            inputTitle.setAttribute("name","title");
+            inputTitle.setAttribute("id","title");
+            title.appendChild(inputTitle);
 
-        const inputDesc = document.createElement("input");
-        inputDesc.setAttribute("type","text");
-        inputDesc.setAttribute("name","description");
-        inputDesc.setAttribute("id","description");
-        form.appendChild(inputDesc);
+        const description = document.createElement("div");
+        description.classList.add("description","input");
+        form.appendChild(description);
 
-        const labelDate = document.createElement("label");
-        labelDate.textContent = "Date"
-        labelDate.setAttribute("for","dueDate");
-        form.appendChild(labelDate);
+            const labelDesc = document.createElement("label");
+            labelDesc.textContent = "Note"
+            labelDesc.setAttribute("for","description");
+            description.appendChild(labelDesc);
 
-        const inputDate = document.createElement("input");
-        inputDate.setAttribute("type","date");
-        inputDate.setAttribute("name","dueDate");
-        inputDate.setAttribute("id","dueDate");
-        form.appendChild(inputDate);
+            const inputDesc = document.createElement("input");
+            inputDesc.setAttribute("type","text");
+            inputDesc.setAttribute("name","description");
+            inputDesc.setAttribute("id","description");
+            description.appendChild(inputDesc);
 
-        const submitButton = document.createElement("button");
-        submitButton.setAttribute("type","submit");
-        submitButton.textContent = "Add";
-        submitButton.classList.add("submitButton");
-        form.appendChild(submitButton);
+        const date = document.createElement("div");
+        date.classList.add("date","input");
+        form.appendChild(date);
+            const labelDate = document.createElement("label");
+            labelDate.textContent = "Date"
+            labelDate.setAttribute("for","dueDate");
+            date.appendChild(labelDate);
 
+            const inputDate = document.createElement("input");
+            inputDate.setAttribute("type","date");
+            inputDate.setAttribute("name","dueDate");
+            inputDate.setAttribute("id","dueDate");
+            date.appendChild(inputDate);
 
-        const radioButtons = document.createElement("div");
-        radioButtons.classList.add("radioButtons");
+        const formButtons = document.createElement("div");
+        formButtons.classList.add("formButtons");
+        form.appendChild(formButtons);
 
-        const radioText = document.createElement("div");
-        radioText.classList.add("radioText");
-        radioText.textContent = "Select Type of work";
-        radioButtons.appendChild(radioText);
-        
-        const homeLabel = document.createElement("label");
-        homeLabel.htmlFor = "home";
-        homeLabel.textContent = "Home";
-        radioButtons.appendChild(homeLabel);
+            const submitButton = document.createElement("button");
+            submitButton.setAttribute("type","submit");
+            submitButton.textContent = "Add";
+            submitButton.classList.add("submitButton");
+            formButtons.appendChild(submitButton);
 
-        const homeButton =  document.createElement("input");
-        homeButton.type = "radio";
-        homeButton.value = "home";
-        homeButton.name = "radio";
-        homeButton.id = "home";
-        radioButtons.appendChild(homeButton);
+            const cancelButton = document.createElement("button");
+            cancelButton.textContent = "Cancel";
+            cancelButton.classList.add("cancelButton");
+            formButtons.appendChild(cancelButton);
 
-        const workLabel = document.createElement("label");
-        workLabel.htmlFor = "work";
-        workLabel.textContent = "Work";
-        radioButtons.appendChild(workLabel);
+        const radio = document.createElement("div");
+        radio.classList.add("radio");
 
-        const workButton =  document.createElement("input");
-        workButton.type = "radio";
-        workButton.value = "work";
-        workButton.name = "radio";
-        workButton.id = "work";
-        radioButtons.appendChild(workButton);
+            const radioText = document.createElement("div");
+            radioText.classList.add("radioText");
+            radioText.textContent = "Select Type of work";
+            radio.appendChild(radioText);
+            
+            const radioButtons = document.createElement("div");
+            radioButtons.classList.add("radioButtons");
+            radio.appendChild(radioButtons);
 
-        const otherLabel = document.createElement("label");
-        otherLabel.htmlFor = "other";
-        otherLabel.textContent = "Other";
-        radioButtons.appendChild(otherLabel);
+                const homeLabel = document.createElement("label");
+                homeLabel.htmlFor = "home";
+                homeLabel.textContent = "Home";
+                radioButtons.appendChild(homeLabel);
 
-        const otherButton =  document.createElement("input");
-        otherButton.type = "radio";
-        otherButton.value = "other";
-        otherButton.name = "radio";
-        otherButton.id = "other";
-        radioButtons.appendChild(otherButton);
+                const homeButton =  document.createElement("input");
+                homeButton.type = "radio";
+                homeButton.value = "home";
+                homeButton.name = "radio";
+                homeButton.id = "home";
+                radioButtons.appendChild(homeButton);
 
-        const confirmButton = document.createElement("button");
-        confirmButton.classList.add("confirmButton");
-        confirmButton.textContent = "Confirm";
-        radioButtons.appendChild(confirmButton);
+                const workLabel = document.createElement("label");
+                workLabel.htmlFor = "work";
+                workLabel.textContent = "Work";
+                radioButtons.appendChild(workLabel);
+
+                const workButton =  document.createElement("input");
+                workButton.type = "radio";
+                workButton.value = "work";
+                workButton.name = "radio";
+                workButton.id = "work";
+                radioButtons.appendChild(workButton);
+
+                const otherLabel = document.createElement("label");
+                otherLabel.htmlFor = "other";
+                otherLabel.textContent = "Other";
+                radioButtons.appendChild(otherLabel);
+
+                const otherButton =  document.createElement("input");
+                otherButton.type = "radio";
+                otherButton.value = "other";
+                otherButton.name = "radio";
+                otherButton.id = "other";
+                radioButtons.appendChild(otherButton);
+
+            const confirmButton = document.createElement("button");
+            confirmButton.classList.add("confirmButton");
+            confirmButton.textContent = "Confirm";
+            radio.appendChild(confirmButton);
 
 
         submitButton.addEventListener('click',(event)=>{
@@ -109,23 +135,27 @@ const formFunction = (projectFactory,Projects,homeProjects,workProjects,otherPro
             else{
                 Projects.push(projectFactory(inputTitle.value,inputDesc.value,inputDate.value));
                 content.removeChild(form);
-                content.appendChild(radioButtons);
+                content.appendChild(radio);
             }
+        });
+
+        cancelButton.addEventListener('click',()=>{
+            content.removeChild(form);
         });
 
         confirmButton.addEventListener('click',(event)=>{
             event.preventDefault();
             if(homeButton.checked){
                 homeProjects.push(projectFactory(inputTitle.value,inputDesc.value,inputDate.value));
-                content.removeChild(radioButtons);
+                content.removeChild(radio);
             }
             else if(workButton.checked){
                 workProjects.push(projectFactory(inputTitle.value,inputDesc.value,inputDate.value));
-                content.removeChild(radioButtons);
+                content.removeChild(radio);
             }
             else if(otherButton.checked){
                 otherProjects.push(projectFactory(inputTitle.value,inputDesc.value,inputDate.value));
-                content.removeChild(radioButtons);
+                content.removeChild(radio);
             }
             else{
                 alert("Please select an option");

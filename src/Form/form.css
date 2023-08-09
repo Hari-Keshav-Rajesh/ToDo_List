@@ -1,0 +1,74 @@
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50vh;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 8vh;
+    font-size: 3vh;
+    padding: 4vh;
+    background-color: orange;
+}
+
+.input{
+    display: flex;
+    gap:2vh;
+}
+
+#title, #description, #dueDate{
+    font-size: 1.5vh;
+}
+
+.formButtons{
+    display: flex;
+    gap: 4vh;
+}
+
+.formButtons button{
+    height:5vh;
+    width: 10vh;
+    font-size: 2vh;
+    font-weight: bold;
+    color: white;
+    background-color: #48BF91;
+}
+
+.radio{
+    background-color: orange;
+    padding: 5vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;  
+}
+
+.radioText{
+   font-size: 5vh;
+}
+
+.radioButtons{
+    display: flex;
+    gap: 1vh;
+}
+
+.radioButtons label{
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.radioButtons input{
+    size: 3vh;
+}
+
+.confirmButton{
+    height:5vh;
+    width: 10vh;
+    font-size: 2vh;
+    font-weight: bold;
+    color: white;
+    background-color: #48BF91;
+}
+
