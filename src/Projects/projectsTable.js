@@ -33,7 +33,7 @@ const projectsTableAdd = (Projects,projectsTable) => {
             projectsBox.appendChild(removeButton);
             removeButton.addEventListener('click',()=>{
                 let removeIndex = Projects[Projects.length-1].index;
-                content.removeChild(projectsBox);
+                projectsTable.removeChild(projectsBox);
                 Projects.splice(removeIndex,1);
                 for(let i=removeIndex;i<Projects.length;i++){
                     Projects[i].index -= 1;
