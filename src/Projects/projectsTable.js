@@ -1,3 +1,5 @@
+import "./projectsTable.css";
+
 const projectsTableAdd = (Projects) => {
 
     const content = document.querySelector(".content");
@@ -24,12 +26,12 @@ const projectsTableAdd = (Projects) => {
 
             var dateText = document.createElement("div");
             dateText.classList.add("dateText");
-            dateText.textContent = `${Projects[(Projects.length) -1].dueDate}`;
+            dateText.innerHTML = `Due Date<br>${Projects[(Projects.length) -1].dueDate}`;
             projectsBox.appendChild(dateText);
 
             var removeButton = document.createElement("button");
             removeButton.classList.add("removeButton");
-            removeButton.textContent = "Remove";
+            removeButton.textContent = "Done";
             projectsBox.appendChild(removeButton);
             removeButton.addEventListener('click',()=>{
                 let removeIndex = Projects[Projects.length-1].index;

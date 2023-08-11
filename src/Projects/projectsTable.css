@@ -1,0 +1,40 @@
+.projectsBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width:160vh;
+    background-color: azure;
+    border-color: #48BF91;
+    border-style: solid;
+    border-radius: 1vh;
+    border-width: 1vh;
+}
+
+.textBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.titleText{
+    font-size: 5vh;
+    font-weight: bold;
+}
+
+.descText{
+    font-size: 3vh;
+}
+
+.dateText{
+    font-size: 3vh;
+}
+
+.removeButton{
+    height:5vh;
+    width: 10vh;
+    font-size: 2vh;
+    font-weight: bold;
+    color: white;
+    background-color: #48BF91;
+}
