@@ -1,11 +1,12 @@
 import "./form.css";
+import { projectsTableAdd } from "../Projects/projectsTable";
 
 const formFunction = (projectFactory,Projects,homeProjects,workProjects,otherProjects) => {
     const content = document.querySelector(".content");
     content.classList.add('content');
 
     const form = document.createElement("form");
-    form.classList.add("form");
+    form.classList.add("form"); 
     content.appendChild(form);
 
         const title = document.createElement("div");
@@ -148,14 +149,17 @@ const formFunction = (projectFactory,Projects,homeProjects,workProjects,otherPro
             if(homeButton.checked){
                 homeProjects.push(projectFactory(inputTitle.value,inputDesc.value,inputDate.value));
                 content.removeChild(radio);
+                projectsTableAdd(Projects);
             }
             else if(workButton.checked){
                 workProjects.push(projectFactory(inputTitle.value,inputDesc.value,inputDate.value));
                 content.removeChild(radio);
+                projectsTableAdd(Projects);
             }
             else if(otherButton.checked){
                 otherProjects.push(projectFactory(inputTitle.value,inputDesc.value,inputDate.value));
                 content.removeChild(radio);
+                projectsTableAdd(Projects);
             }
             else{
                 alert("Please select an option");
