@@ -1,9 +1,13 @@
 import "./form.css";
 import { projectsTableAdd } from "../Projects/projectsTable";
+import { homeTableAdd } from "../Projects/homeTable";
 
 const formFunction = (projectFactory,Projects,homeProjects,workProjects,otherProjects) => {
     const content = document.querySelector(".content");
     const projectsTable = document.querySelector(".projectsTable");
+    const homeTable = document.querySelector(".homeTable");
+    const workTable = document.querySelector(".workTable");
+    const otherTable = document.querySelector(".otherTable");
     content.classList.add('content');
 
     const form = document.createElement("form");
@@ -151,17 +155,17 @@ const formFunction = (projectFactory,Projects,homeProjects,workProjects,otherPro
             if(homeButton.checked){
                 homeProjects.push(projectFactory(inputTitle.value,inputDesc.value,inputDate.value,homeProjects.length));
                 content.removeChild(radio);
-                projectsTableAdd(Projects,projectsTable);
+                projectsTableAdd(Projects,projectsTable,homeProjects,homeTable);
             }
             else if(workButton.checked){
                 workProjects.push(projectFactory(inputTitle.value,inputDesc.value,inputDate.value,workProjects.length));
                 content.removeChild(radio);
-                projectsTableAdd(Projects,projectsTable);
+                projectsTableAdd(Projects,projectsTable,workProjects,workTable);
             }
             else if(otherButton.checked){
                 otherProjects.push(projectFactory(inputTitle.value,inputDesc.value,inputDate.value,otherProjects.length));
                 content.removeChild(radio);
-                projectsTableAdd(Projects,projectsTable);
+                projectsTableAdd(Projects,projectsTable,otherProjects,otherTable);
             }
             else{
                 alert("Please select an option");

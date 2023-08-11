@@ -10,6 +10,19 @@ const projectFactory = (title,description,dueDate,index) => {
 const projectsTable = document.createElement("table");
 projectsTable.classList.add("projectsTable");
 content.appendChild(projectsTable);
+
+const homeTable = document.createElement("table");
+homeTable.classList.add("homeTable");
+content.appendChild(homeTable);
+
+const workTable = document.createElement("table");
+workTable.classList.add("workTable");
+content.appendChild(workTable);
+
+const otherTable = document.createElement("table");
+otherTable.classList.add("otherTable");
+content.appendChild(otherTable);
+
  
     let Projects = [];
 
@@ -24,12 +37,20 @@ addProjectButton.addEventListener('click',()=>{
 
 const projectsButton = document.querySelector(".projects");
 projectsButton.addEventListener('click',()=>{
-    content.innerHTML='';
     content.appendChild(projectsTable);
 });
 
 const homeButton = document.querySelector(".home");
 homeButton.addEventListener('click',()=>{
-    content.innerHTML='';
+    content.appendChild(homeTable);
 });
 
+const workButton = document.querySelector(".work");
+workButton.addEventListener('click',()=>{
+    content.appendChild(workTable);
+});
+
+const otherButton = document.querySelector(".others");
+otherButton.addEventListener('click',()=>{
+    content.appendChild(otherTable);
+});
