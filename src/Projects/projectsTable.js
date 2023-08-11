@@ -1,12 +1,10 @@
 import "./projectsTable.css";
 
-const projectsTableAdd = (Projects) => {
-
-    const content = document.querySelector(".content");
+const projectsTableAdd = (Projects,projectsTable) => {
 
         var projectsBox = document.createElement("div");
         projectsBox.classList.add("projectsBox");
-        content.appendChild(projectsBox);
+        projectsTable.appendChild(projectsBox);
          
             var textBox = document.createElement("div");
             textBox.classList.add("textBox");

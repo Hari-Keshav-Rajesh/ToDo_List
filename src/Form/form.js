@@ -3,6 +3,7 @@ import { projectsTableAdd } from "../Projects/projectsTable";
 
 const formFunction = (projectFactory,Projects,homeProjects,workProjects,otherProjects) => {
     const content = document.querySelector(".content");
+    const projectsTable = document.querySelector(".projectsTable");
     content.classList.add('content');
 
     const form = document.createElement("form");
@@ -150,17 +151,17 @@ const formFunction = (projectFactory,Projects,homeProjects,workProjects,otherPro
             if(homeButton.checked){
                 homeProjects.push(projectFactory(inputTitle.value,inputDesc.value,inputDate.value,homeProjects.length));
                 content.removeChild(radio);
-                projectsTableAdd(Projects);
+                projectsTableAdd(Projects,projectsTable);
             }
             else if(workButton.checked){
                 workProjects.push(projectFactory(inputTitle.value,inputDesc.value,inputDate.value,workProjects.length));
                 content.removeChild(radio);
-                projectsTableAdd(Projects);
+                projectsTableAdd(Projects,projectsTable);
             }
             else if(otherButton.checked){
                 otherProjects.push(projectFactory(inputTitle.value,inputDesc.value,inputDate.value,otherProjects.length));
                 content.removeChild(radio);
-                projectsTableAdd(Projects);
+                projectsTableAdd(Projects,projectsTable);
             }
             else{
                 alert("Please select an option");
