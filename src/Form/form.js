@@ -170,6 +170,10 @@ const formFunction = (projectFactory,Projects,homeProjects,workProjects,otherPro
             else{
                 alert("Please select an option");
             }
+            projectsTable.style.display = 'block';
+            homeTable.style.display = 'none';
+            workTable.style.display = 'none';
+            otherTable.style.display = 'none';
         });
 }
 

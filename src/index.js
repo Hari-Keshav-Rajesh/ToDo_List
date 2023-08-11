@@ -37,20 +37,32 @@ addProjectButton.addEventListener('click',()=>{
 
 const projectsButton = document.querySelector(".projects");
 projectsButton.addEventListener('click',()=>{
-    content.appendChild(projectsTable);
+    projectsTable.style.display = 'block';
+    homeTable.style.display = 'none';
+    workTable.style.display = 'none';
+    otherTable.style.display = 'none';
 });
 
 const homeButton = document.querySelector(".home");
 homeButton.addEventListener('click',()=>{
-    content.appendChild(homeTable);
+    homeTable.style.display = 'block';
+    projectsTable.style.display = 'none';
+    workTable.style.display = 'none';
+    otherTable.style.display = 'none';
 });
 
 const workButton = document.querySelector(".work");
 workButton.addEventListener('click',()=>{
-    content.appendChild(workTable);
+    workTable.style.display = 'block';
+    homeTable.style.display = 'none';
+    projectsTable.style.display = 'none';
+    otherTable.style.display = 'none';
 });
 
 const otherButton = document.querySelector(".others");
 otherButton.addEventListener('click',()=>{
-    content.appendChild(otherTable);
+    otherTable.style.display = 'block';
+    homeTable.style.display = 'none';
+    workTable.style.display = 'none';
+    projectsTable.style.display = 'none';
 });
