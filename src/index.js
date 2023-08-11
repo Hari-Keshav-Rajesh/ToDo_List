@@ -2,10 +2,10 @@ import { formFunction } from "./Form/form";
 
 const content = document.querySelector(".content");
 
-    const projectFactory = (title,description,dueDate) => {
-        return{title,description,dueDate};
+    const projectFactory = (title,description,dueDate,index) => {
+        return{title,description,dueDate,index};
     };
-
+ 
     let Projects = [];
 
     let homeProjects = [];

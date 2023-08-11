@@ -5,7 +5,7 @@ const projectsTableAdd = (Projects) => {
         var projectsBox = document.createElement("div");
         projectsBox.classList.add("projectsBox");
         content.appendChild(projectsBox);
-        
+         
             var textBox = document.createElement("div");
             textBox.classList.add("textBox");
             projectsBox.appendChild(textBox);
@@ -32,8 +32,12 @@ const projectsTableAdd = (Projects) => {
             removeButton.textContent = "Remove";
             projectsBox.appendChild(removeButton);
             removeButton.addEventListener('click',()=>{
+                let removeIndex = Projects[Projects.length-1].index;
                 content.removeChild(projectsBox);
-                Projects.splice(Projects.length-1);
+                Projects.splice(removeIndex,1);
+                for(let i=removeIndex;i<Projects.length;i++){
+                    Projects[i].index -= 1;
+                }
             });
 
 }

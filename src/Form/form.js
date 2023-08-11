@@ -7,7 +7,7 @@ const formFunction = (projectFactory,Projects,homeProjects,workProjects,otherPro
 
     const form = document.createElement("form");
     form.classList.add("form"); 
-    content.appendChild(form);
+    content.appendChild(form); 
 
         const title = document.createElement("div");
         title.classList.add("title","input");
@@ -134,7 +134,7 @@ const formFunction = (projectFactory,Projects,homeProjects,workProjects,otherPro
                 alert("Please enter all details");   
             }
             else{
-                Projects.push(projectFactory(inputTitle.value,inputDesc.value,inputDate.value));
+                Projects.push(projectFactory(inputTitle.value,inputDesc.value,inputDate.value,Projects.length));
                 content.removeChild(form);
                 content.appendChild(radio);
             }
@@ -144,20 +144,21 @@ const formFunction = (projectFactory,Projects,homeProjects,workProjects,otherPro
             content.removeChild(form);
         });
 
+
         confirmButton.addEventListener('click',(event)=>{
             event.preventDefault();
             if(homeButton.checked){
-                homeProjects.push(projectFactory(inputTitle.value,inputDesc.value,inputDate.value));
+                homeProjects.push(projectFactory(inputTitle.value,inputDesc.value,inputDate.value,homeProjects.length));
                 content.removeChild(radio);
                 projectsTableAdd(Projects);
             }
             else if(workButton.checked){
-                workProjects.push(projectFactory(inputTitle.value,inputDesc.value,inputDate.value));
+                workProjects.push(projectFactory(inputTitle.value,inputDesc.value,inputDate.value,workProjects.length));
                 content.removeChild(radio);
                 projectsTableAdd(Projects);
             }
             else if(otherButton.checked){
-                otherProjects.push(projectFactory(inputTitle.value,inputDesc.value,inputDate.value));
+                otherProjects.push(projectFactory(inputTitle.value,inputDesc.value,inputDate.value,otherProjects.length));
                 content.removeChild(radio);
                 projectsTableAdd(Projects);
             }
