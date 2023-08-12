@@ -2,7 +2,7 @@ body{
     display: flex;
     flex-direction: column;
 }
-
+ 
 .header{
     color: white;
     background-color: black;
@@ -32,6 +32,10 @@ body{
     background-color: azure;
 }
 
+.projects:hover{
+    color: orange;
+}
+
 .subProjects{
     display: flex;
     flex-direction: column;
@@ -47,15 +51,21 @@ body{
     background-color: azure;
 }
 
+.subProjects button:hover{
+    color:orange;
+}
+
 .addProject{
     font-size: 4vh;
     font-weight: bold;
     color: white;
     background-color: #48BF91;
-    border-width: 1vh;
-    border-color: #0076BE;
-    border-style: solid;
-    border-radius: 3vh;
+    padding: 1vh;
+}
+
+.addProject:hover{
+    background-color: orange;
+    color: black;
 }
 
 /*End of Sidebar CSS*/

@@ -40,6 +40,9 @@
     background-color: #48BF91;
 }
 
+.formButtons button:hover{
+    color: black;
+}
 .radio{
     background-color: orange;
     padding: 5vh;
@@ -78,5 +81,9 @@
     font-weight: bold;
     color: white;
     background-color: #48BF91;
+}
+
+.confirmButton:hover{
+    color: black;
 }
 
